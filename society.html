@@ -1,0 +1,176 @@
+<!DOCtype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body><nav>
+    <div class="topnav" id="myTopnav">
+        <a href="home.html" style="float:left;">HOME PAGE</a>
+        <a href="board.html" style="float:left;">BOARD OF DIRECTORS</a>
+        <a href="#society" style="float:left;">SOCIETY STAFF</a>
+        <a href="about.html" style="float:left;">ABOUT US</a>
+        <a href="scheme.html" style="float:left;">SOCIETY SCHEMES</a>
+        <a href="forms.html" style="float:left;">FORMS DOWNLOAD</a>
+        <a href="gallery.html" style="float:left;">PHOTO GALLERY</a>
+        <a href="faq.html" style="float:left;">FAQs</a>
+        <a href="contact.html" style="float:left;">CONTACT US</a>
+        <a href="#" style="float:right;">LOGIN</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+        </a>
+    </div></nav>
+    <script>
+            $(document).ready(function () {
+                $(document).on("scroll", onScroll);
+         
+                $('a[href^="#"]').on('click', function (e) {
+                    e.preventDefault();
+                    $(document).off("scroll");
+         
+                    $('a').each(function () {
+                        $(this).removeClass('active');
+                    })
+                    $(this).addClass('active');
+         
+                    var target = this.hash;
+                    $target = $(target);
+                    $('html, body').stop().animate({
+                        'scrollTop': $target.offset().top+2
+                    }, 500, 'swing', function () {
+                        window.location.hash = target;
+                        $(document).on("scroll", onScroll);
+                    });
+                });
+            });
+         
+            function onScroll(event){
+                var scrollPosition = $(document).scrollTop();
+                $('nav a').each(function () {
+                    var currentLink = $(this);
+                    var refElement = $(currentLink.attr("href"));
+                    if (refElement.position().top <= scrollPosition && refElement.position().top + refElement.height() > scrollPosition) {
+                        $('nav ul li a').removeClass("active");
+                        currentLink.addClass("active");
+                    }
+                    else{
+                        currentLink.removeClass("active");
+                    }
+                });
+            }
+        </script>
+    <script>
+        function myFunction() 
+        {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav")
+        { x.className += " responsive"; } 
+        else 
+        { x.className = "topnav"; }
+        }
+    </script><br><br>
+<div class="container">
+    <table width=100%;>
+    <tr>
+        <td>
+            <img src="logo.png" alt="LOGO" width="120px" height="120px">
+        </td>
+        <td><CENTER><h1 id="h1" style=" color:rgb(243, 234, 196);">WELCOME TO SBI SOCIETY WEBSITE</h1></CENTER>
+            <marquee>State Bank of India(Bhopal circle), Karmchari Sahakari Sakh Samiti Maryadit(Madhya Pradesh and Chhattisgarh), A Multi-State
+                Cooperative Society,(Regd.No. MSCS /CR /133/ 2001) C/o: State Bank of India, Local Head Office, Hoshangabad Road, Bhopal-462011.
+            </marquee></td>
+    </tr>
+    </table>
+</div><br><br><br><br><br><br><br><br>
+<div id="society">
+<table style="border:3px solid rgb(224, 217, 217); width:100%; text-align:center;">
+    <tr style=" text-align:center; color:white;  background-color: rgb(53, 108, 202); font-size:2vw;">
+        <th style="border:3px solid rgb(224, 217, 217);">NAME</th>
+        <th style="border:3px solid rgb(224, 217, 217);">ADDRESS</th>
+        <th style="border:3px solid rgb(224, 217, 217);">CONTACT </th>
+    </tr>
+    <tr style=" text-align:center;  background-color: rgb(136, 177, 248); font-size:1.5vw;">
+        <td style="border:3px solid rgb(36, 35, 35);"><b>Mr. V.S.DWIVEDI</b><br>ACCOUNTANT</td> 
+        <td style="border:3px solid rgb(36, 35, 35);">PLOTNO -1,FLATNO G-1, SAI HOMES, ARJUN NAG, P.O. GOVINGPURA, BPL-462023</td>
+        <td style="border:3px solid rgb(36, 35, 35);">TEL: 2602132 <br>MOB: 9977093697</td>
+    </tr>
+    <tr style=" text-align:center;  background-color: rgb(136, 177, 248); font-size:1.5vw;">
+        <td style="border:3px solid rgb(36, 35, 35);"><b>Mr. S.K.TIWARI</b><br>Sr.PROGRAMMER</td>
+        <td style="border:3px solid rgb(36, 35, 35);">70, SHARDA KUNJ, PHASE-II,, NARELA SHANKRI, BHOPAL-462 021</td>
+        <td style="border:3px solid rgb(36, 35, 35);">TEL: 4278624<br>MOB: 9826334007</td>
+    </tr>
+    <tr style=" text-align:center;  background-color: rgb(136, 177, 248); font-size:1.5vw;">
+        <td style="border:3px solid rgb(36, 35, 35);"><b>Mr. S.K.VINCHURKAR</b><br>HEAD CLERK</td>
+        <td style="border:3px solid rgb(36, 35, 35);">HOUSE NO.:111, MANDAKINI HOUSHING SO, KOLAR ROAD,, BHOPAL</td>
+        <td style="border:3px solid rgb(36, 35, 35);">TEL: 4077011<br>MOB: 9826481011</td>
+    </tr>
+    <tr style=" text-align:center;  background-color: rgb(136, 177, 248); font-size:1.5vw;">
+        <td style="border:3px solid rgb(36, 35, 35);"><b>Mr. DILIP WANI</b><br>Sr.CLERK</td>
+        <td style="border:3px solid rgb(36, 35, 35);">PLOT NO. 57, AVINAS NAGAR, BARKHEDA,, BHOPAL-462 021</td>
+        <td style="border:3px solid rgb(36, 35, 35);">TEL:<br>MOB: 9893174120</td>
+    </tr>
+    <tr style="text-align:center;  background-color: rgb(136, 177, 248); font-size:1.5vw;">
+        <td style="border:3px solid rgb(36, 35, 35);"><b>Mr. L.D.SHINDE</b><br>TYP.CLERK</td>
+        <td style="border:3px solid rgb(36, 35, 35);">HOUSE NO.:32, NEAR RAMMANDIR, TILA JAMALPURA, BHOPAL-462 001</td>
+        <td style="border:3px solid rgb(36, 35, 35);">TEL:<br>MOB: 9425365502</td>
+    </tr>
+    <tr style=" text-align:center;  background-color: rgb(136, 177, 248); font-size:1.5vw;">
+        <td style="border:3px solid rgb(36, 35, 35);"><b>Mr. SAJI T. GEORGE</b><br>Jr.PROGRAMMER</td>
+        <td style="border:3px solid rgb(36, 35, 35);">HOUSE NO. A - 3/4, AMERDEEP APAEMENT, PANJABI BAG, BHOPAL-462 023</td>
+        <td style="border:3px solid rgb(36, 35, 35);">TEL: 2601706<br>MOB: 9826530784</td>
+    </tr>
+    <tr style=" text-align:center;  background-color: rgb(136, 177, 248); font-size:1.5vw;">
+        <td style="border:3px solid rgb(36, 35, 35);"><b>Mr. AJAY CHOURASIA</b><br>PROGRAMMER</td>
+        <td style="border:3px solid rgb(36, 35, 35);">C-7 SAHAKARI PARISAR, KALPNA NAGAR, PIPLANI, BHOPAL-462 021</td>
+        <td style="border:3px solid rgb(36, 35, 35);">TEL:<br> MOB: 9827279014</td>
+    </tr>
+    <tr style=" text-align:center;  background-color: rgb(136, 177, 248); font-size:1.5vw;">
+        <td style="border:3px solid rgb(36, 35, 35);"><b>Smt.ARCHANA M. KEKRE</b><br>PROGRAMMER</td>
+        <td style="border:3px solid rgb(36, 35, 35);">	A-150,, SHAHPURA, BHOPAL, BHOPAL-462 016</td>
+        <td style="border:3px solid rgb(36, 35, 35);">TEL: 2421976<br> MOB: 9826784806</td>
+    </tr>
+    <tr style=" text-align:center;  background-color: rgb(136, 177, 248); font-size:1.5vw;">
+        <td style="border:3px solid rgb(36, 35, 35);"><b>Mr.RATAN BHATTACHARY<br>CLERK</b></td>
+        <td style="border:3px solid rgb(36, 35, 35);">HOUSE NO.:79 3/D, SAKET NAGAR, P.O.KASTURBA HOS., BHOPAL-462 024</td>
+        <td style="border:3px solid rgb(36, 35, 35);">TEL:<br>MOB: 9826481774</td>
+    </tr>
+    <tr style=" text-align:center;  background-color: rgb(136, 177, 248); font-size:1.5vw;">
+        <td style="border:3px solid rgb(36, 35, 35);"><b>Mr. SUNIL DHADKAR</b><br>CLERK./R.KEEPAR</td>
+        <td style="border:3px solid rgb(36, 35, 35);">HOUSE NO.:63, BAFNA COLONY, NEAR SHIV MANDIR,, BAIRASIA ROAD,BHOPAL</td>
+        <td style="border:3px solid rgb(36, 35, 35);">TEL:<br>MOB: 9300119161</td>
+    </tr>
+    <tr style=" text-align:center;  background-color: rgb(136, 177, 248); font-size:1.5vw;">
+        <td style="border:3px solid rgb(36, 35, 35);">Mr. K.K.KUREEL<br>MESSENGER</td>
+        <td style="border:3px solid rgb(36, 35, 35);">HOUSE NO.:222, SAHRDA NAGAR, NARIAL KHEDA, BHOPAL</td>
+        <td style="border:3px solid rgb(36, 35, 35);">TEL:<br>MOB: 9793736330</td>
+    </tr>
+    <tr style=" text-align:center;  background-color: rgb(136, 177, 248); font-size:1.5vw;">
+        <td style="border:3px solid rgb(36, 35, 35);"><b>Mr. RAM PRATAP SINGH</b><br>MESSENGER</td>
+        <td style="border:3px solid rgb(36, 35, 35);">LIG-29, R.K. ENCLAVE, BAGMUGALIYA, , BHOPAL -462 043</td>
+        <td style="border:3px solid rgb(36, 35, 35);">TEL:<br>MOB: 9826877202</td>
+    </tr>
+    <tr style=" text-align:center;  background-color: rgb(136, 177, 248); font-size:1.5vw;">
+        <td style="border:3px solid rgb(36, 35, 35);"><b>Mr. SANJAY MITTAL</b><br>CLERK</td>
+        <td style="border:3px solid rgb(36, 35, 35);">FLAT NO.:04, SAGAR CAMPUS, BLOCK: C,CHHUNA BHATTI, KOLAR ROAD, BHOPAL</td>
+        <td style="border:3px solid rgb(36, 35, 35);">TEL: 4078331<br>MOB: 9827085695</td>
+    </tr>
+    <tr style=" text-align:center; background-color: rgb(136, 177, 248); font-size:1.5vw;">
+        <td style="border:3px solid rgb(36, 35, 35);"><b>Mr. SANJU DEHRIYA</b></td>
+        <td style="border:3px solid rgb(36, 35, 35);">5/13 ,A Shayog Bhavan Arera colony ,Bhopal 462016</td>
+        <td style="border:3px solid rgb(36, 35, 35);">TEL:<br>MOB: 9691494592</td>
+    </tr>
+    <tr style=" text-align:center; background-color: rgb(136, 177, 248); font-size:1.5vw;">
+        <td style="border:3px solid rgb(36, 35, 35);"><b>Mr.PRAKASH TRIVEDI</b></td>
+        <td style="border:3px solid rgb(36, 35, 35);">AR-58/B RAJHURSH COLONY NAYAPURA COLAR ROAD BHOPAL</td>
+        <td style="border:3px solid rgb(36, 35, 35);">TEL:<br>MOB: 9977991840</td>
+    </tr>
+</table>
+</div>
+</body>
+</html>

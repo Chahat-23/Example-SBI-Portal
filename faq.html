@@ -1,0 +1,132 @@
+<!DOCtype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="board.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+        <nav>
+            <div class="topnav" id="myTopnav">
+                <a href="home.html" style="float:left;">HOME PAGE</a>
+                <a href="gallery.html" style="float:left;">PHOTO GALLERY</a>
+                <a href="#faq" style="float:left;">FAQs</a>
+                <a href="board.html" style="float:left;">BOARD OF DIRECTORS</a>
+                <a href="scheme.html" style="float:left;">SOCIETY SCHEMES</a>
+                <a href="forms.html" style="float:left;">FORMS DOWNLOAD</a>
+                <a href="society.html" style="float:left;">SOCIETY STAFF</a>
+                <a href="about.html" style="float:left;">ABOUT US</a>
+                <a href="contact.html" style="float:left;">CONTACT US</a>
+                <a href="#" style="float:right;">LOGIN</a>
+                </a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+                      </a>
+            </div></nav>
+                <script>
+                    function myFunction() 
+                    {
+                    var x = document.getElementById("myTopnav");
+                    if (x.className === "topnav")
+                    { x.className += " responsive"; } 
+                    else 
+                    { x.className = "topnav"; }
+                    }
+                </script><br><br>
+    <div class="container">
+        <table width=100%;>
+        <tr>
+            <td>
+                <img src="logo.png" alt="LOGO" width="120px" height="120px">
+            </td>
+            <td><CENTER><h1 id="h1" style=" color:rgb(243, 234, 196);">WELCOME TO SBI SOCIETY WEBSITE</h1></CENTER>
+                <marquee>State Bank of India(Bhopal circle), Karmchari Sahakari Sakh Samiti Maryadit(Madhya Pradesh and Chhattisgarh), A Multi-State
+                    Cooperative Society,(Regd.No. MSCS /CR /133/ 2001) C/o: State Bank of India, Local Head Office, Hoshangabad Road, Bhopal-462011.
+                </marquee></td>
+        </tr>
+        </table>
+    </div>
+        <script>
+        $(document).ready(function () {
+            $(document).on("scroll", onScroll);
+     
+            $('a[href^="#"]').on('click', function (e) {
+                e.preventDefault();
+                $(document).off("scroll");
+     
+                $('a').each(function () {
+                    $(this).removeClass('active');
+                })
+                $(this).addClass('active');
+     
+                var target = this.hash;
+                $target = $(target);
+                $('html, body').stop().animate({
+                    'scrollTop': $target.offset().top+2
+                }, 500, 'swing', function () {
+                    window.location.hash = target;
+                    $(document).on("scroll", onScroll);
+                });
+            });
+        });
+     
+        function onScroll(event){
+            var scrollPosition = $(document).scrollTop();
+            $('nav a').each(function () {
+                var currentLink = $(this);
+                var refElement = $(currentLink.attr("href"));
+                if (refElement.position().top <= scrollPosition && refElement.position().top + refElement.height() > scrollPosition) {
+                    $('nav ul li a').removeClass("active");
+                    currentLink.addClass("active");
+                }
+                else{
+                    currentLink.removeClass("active");
+                }
+            });
+        }
+    </script><br><br><br><br><br><br>
+<div class="main " id="gallery">
+        <center><img src="sbi.jpg" alt="SBI" width="300vw" height="250vw"></center>
+        <h2 style="color:#448AFF; font-size:2vw;"><b>FAQs</b></h2><br><br>
+        <hr style="display: block; border-width: 0.15vw; border-color:rgb(170, 166, 166);"><br><br>
+        <h2 style=" font-size:1.6vw; "><b>Q 1 WHO CAN BE THE MEMBERS OF THE SOCIETY ?</b></h2>
+        <p style="font-size:1.2vw;">
+                ANS: PERMANENT EMPLOYEE OF SBI CAN BE THE MEMBER OF THE SOCIETY.</p>
+        <br><br>
+        <h2 style=" font-size:1.6vw; "><b>Q 2 WHAT IS THE ELIGIBILITY FOR SECURING LOAN FROM THE SOCIETY ?</b></h2>
+        <p style="font-size:1.2vw;">ANS:<ol style="list-style-type:lower-roman; font-size:1.2vw;"><li>MEMBERS WITH 2 YEARS SERVICE CAN AVAIL LOAN OF Rs 2 LAC.</li>
+        <li>FOUR YEARS CONFORMED SERVICE IN THE BANK FOR LOAN OF Rs 5 LAC W.E.F 6/9/2015.</li></ol></p>
+        <br><br>
+        <h2 style=" font-size:1.6vw; "><b>Q 3 WHAT IS THE LIMIT OF LOAN ?</b></h2>
+        <p style="font-size:1.2vw;">
+                ANS: 35 TIMES OF SALARY (BASIC+DA+SPL ALLOWANCE) OR MAXIMUM RS. 5LACS, WHICH EVER IS LESS.</p>
+        <br><br>
+        <h2 style=" font-size:1.6vw;"><b>Q 4 WHAT ARE THE NECESSARY CONDITIONS FOR SECURING LOAN ?</b></h2>
+        <p style="font-size:1.2vw;">ANS:
+            <ol style="list-style-type:lower-roman; font-size:1.2vw;">
+                <li>TWO GUARANTORS WHO ARE MEMBERS OF THE SOCIETY 
+                        AND THEIR LIMIT SHOULD NOT EXCEED RS.20 LACS FOR OFFICERS /AWARD AND RS. 15 LACS FOR SUBORDINATE STAFF.</li>
+                <li>PERMISSION OF DGM IS NECESSARY IN CASE OD LIMIT HAS BEEN AVAILED BY THE MEMBER.</li>
+                <li>DEDUCTIONS FROM THE SALARY INCLUDING THE INSTALMENT OF LOAN SHOULD NOT EXCEED 60% .</li>
+                <li>GUARANTOR SHOULD NOT BE DEFAULTER OF THE SOCIETY.</li>
+                <li>THE SERVICE PERIOD OF BORROWER/GUARANTOR SHOULD NOT BE LESS THEN THE REPAYMENT PERIOD.</li>
+                <li>SHARES WORTH 10% OF LOAN AMOUNT IS TO BE ACQUIRED BY THE BORROWER.</li>
+            </ol>
+        </p>
+        <br><br>
+        <h2 style=" font-size:1.6vw;"><b>
+                Q 5 WHAT ARE THE PURPOSES FOR WHICH LOAN CAN BE GRANTED ?</b></h2>
+        <p style="font-size:1.2vw;">
+                ANS: PURCHASE/ REPAIRING OF HOUSE/PLOT, MARRIAGE, RITUALS, MEDICAL.</p>
+        <br><br>
+        <h2 style=" font-size:1.6vw; "><b>
+                Q 6 WHAT ARE THE INSTALMENTS FOR REPAYING THE LOAN?</b></h2>
+        <p style="font-size:1.2vw;">
+                ANS HOUSING PURPOSE MIN. 12 MONTHS AND MAX 120 INSTS. OTHERS MIN, 12 MONTHS AND MAX. 84 INSTS.</p>
+        <br><br>
+</body>
+</html>

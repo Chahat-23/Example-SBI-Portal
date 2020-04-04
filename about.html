@@ -1,0 +1,286 @@
+<!DOCtype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="board.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+        
+                <div class="topnav" id="myTopnav">
+                    <a href="home.html" style="float:left;">HOME PAGE</a>
+                    <a href="board.html" style="float:left;">BOARD OF DIRECTORS</a>
+                    <a href="society.html" style="float:left;">SOCIETY STAFF</a>
+                    <a href="#about" style="float:left;">ABOUT US</a>
+                    <a href="scheme.html" style="float:left;">SOCIETY SCHEMES</a>
+                    <a href="forms.html" style="float:left;">FORMS DOWNLOAD</a>
+                    <a href="gallery.html" style="float:left;">PHOTO GALLERY</a>
+                    <a href="faq.html" style="float:left;">FAQs</a>
+                    <a href="contact.html" style="float:left;">CONTACT US</a>
+                    <a href="#" style="float:right;">LOGIN</a>
+                    </a>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                            <i class="fa fa-bars"></i>
+                          </a>
+                </div>
+                <script>
+                    function myFunction() 
+                    {
+                    var x = document.getElementById("myTopnav");
+                    if (x.className === "topnav")
+                    { x.className += " responsive"; } 
+                    else 
+                    { x.className = "topnav"; }
+                    }
+                </script><br><br>
+    <div class="container">
+        <table width=100%;>
+        <tr>
+            <td>
+                <img src="logo.png" alt="LOGO" width="120px" height="120px">
+            </td>
+            <td><CENTER><h1 id="h1" style=" color:rgb(243, 234, 196);">WELCOME TO SBI SOCIETY WEBSITE</h1></CENTER>
+                <marquee>State Bank of India(Bhopal circle), Karmchari Sahakari Sakh Samiti Maryadit(Madhya Pradesh and Chhattisgarh), A Multi-State
+                    Cooperative Society,(Regd.No. MSCS /CR /133/ 2001) C/o: State Bank of India, Local Head Office, Hoshangabad Road, Bhopal-462011.
+                </marquee></td>
+        </tr>
+        </table>
+    </div>
+        <nav>
+            <div class="sidenav" style="font-size: 1vw;">
+                <a href="#name"><b>Name, Address ,Operation area</b></a>
+                <a href="#objects"> <b>Objects</b> </a>
+                <a href="#pos"> <b>Position</b> </a>
+                <a href="#mem"><b>Memberships</b> </a>
+                <a href="#share"><b>Share Capital</b></a>
+                <a href="#loan"><b>Loan (Maximum Rs. 5.00 lacs @ 7% p.a.</b></a>
+                <a href="#dep"><b>Compulsory Deposit</b></a>
+                <a href="#fund"><b>Security & Aid Fund</b></a> 
+            </div>
+        </nav>
+        <script>
+        $(document).ready(function () {
+            $(document).on("scroll", onScroll);
+     
+            $('a[href^="#"]').on('click', function (e) {
+                e.preventDefault();
+                $(document).off("scroll");
+     
+                $('a').each(function () {
+                    $(this).removeClass('active');
+                })
+                $(this).addClass('active');
+     
+                var target = this.hash;
+                $target = $(target);
+                $('html, body').stop().animate({
+                    'scrollTop': $target.offset().top+2
+                }, 500, 'swing', function () {
+                    window.location.hash = target;
+                    $(document).on("scroll", onScroll);
+                });
+            });
+        });
+     
+        function onScroll(event){
+            var scrollPosition = $(document).scrollTop();
+            $('nav a').each(function () {
+                var currentLink = $(this);
+                var refElement = $(currentLink.attr("href"));
+                if (refElement.position().top <= scrollPosition && refElement.position().top + refElement.height() > scrollPosition) {
+                    $('nav ul li a').removeClass("active");
+                    currentLink.addClass("active");
+                }
+                else{
+                    currentLink.removeClass("active");
+                }
+            });
+        }
+    </script><br><br><br><br><br><br>
+<div class="main " id="about">
+    <div class="name" id="name" style="margin-left:30vw;">
+        <center><img src="sbi.jpg" alt="SBI" width="300vw" height="250vw"></center>
+        <h2 style="color:#448AFF; font-size:2vw;"><b>ABOUT US</b></h2><br><br>
+        <hr style="display: block; border-width: 0.15vw; border-color:rgb(170, 166, 166);"><br><br>
+        <h2 style=" font-size:1.6vw;"><b>Name, Address, Area of Operation</b></h2><br><br>
+        <p style="font-size:1.2vw;">The name of the Society shall be State Bank of India ( Bhopal Circle) Karmchari Sahakari Sakh Samiti Maryadit. 
+            The Registered Office of the Society shall be at State Bank of India, Local Head Office, Hoshangabad Road, Bhopal - 462 011, Madhya Pradesh.
+            The area of operation of the Society shall be the States of Madhya Pradesh and Chhatisgarh.</p>
+    </div><br><br>
+    <hr style="display: block; border-width: 0.15vw; border-color:rgb(170, 166, 166);"><br><br>
+    <div class="objects" id="objects" style="margin-left:30vw;">
+        <h2 style=" font-size:1.6vw;"><b>Objects</b></h2><br><br>
+        <p style="font-size:1.2vw;">The object of the Society is to ensure the economic and social progression of its members by promoting austerity, 
+            self-reliance and co-operation amongst them. To this end, the Society shall undertake the following:</p>
+        <ol style="font-size:1.2vw; list-style: lower-alpha;">
+            <li> To promote the habit of 'savings' amongst members.</li>
+            <li>To invest the amounts collected from members in a safe and prudent manner.</li>
+            <li>To arrange, according to the need of the members, for loan at suitable rate of interest.</li>
+            <li>To act as agent to take and repay loan from Government, Cooperative Bank, State Bank of India, Reserve Bank of India or any other Financial Institution.</li>
+            <li>To prepare and implement schemes and programmes for the welfare and economic betterment of members and their family.</li>
+            <li>To open stores, if need be, with branches, for sale of groceries, consumer goods and other daily use items, stationery, general goods, etc. on whole-sale or retail basis.</li>
+            <li>To arrange for printing and publishing of books and periodicals and also for education and training for knowledge and guidance of members and their family.</li>
+            <li>To accept/give donations for social, cultural and charitable cause/purposes.</li>
+            <li>Any other thing which is incidental to and connected with the attainment of the above objects.</li>
+        </ol>
+    </div><br><br>
+    <hr style="display: block; border-width: 0.15vw; border-color:rgb(170, 166, 166);"><br><br>
+    <div class="pos" id="pos" style="margin-left:30vw;">
+        <h2 style=" font-size:1.6vw;"><b>Position as on 31.03.2018</b></h2><br><br>
+        <p style="font-size:1.2vw;">Membership 9803 
+            <br>Authorised Share Capital 15,00,00,000.00.00
+            <br>Shares subscribed and paid-up capital 133605175.00 
+            <br>Declared Dividend for Year 2017-18 @ 10% 133605175.00
+            <br>Loan to members 725379646.00 
+            <br>Reserve and Surplus 303725535.00
+            <br>Deposit 335927899.00
+            <br>Investments 57532086.00</p>
+    </div><br><br>
+    <hr style="display: block; border-width: 0.15vw; border-color:rgb(170, 166, 166);"><br><br>
+    <div class="mem" id="mem" style="margin-left:30vw;">
+        <h2 style=" font-size:1.6vw;"><b>Membership</b></h2><br><br>
+        <ol style="font-size:1.2vw;">
+            <li>Permanent employees of the State Bank of India's Bhopal Circle alone can become the members of the Society. 
+                In the event of cessation of service or on transfer out of Bhopal Circle, a member may continue to be so, but the power to continue his/her membership shall vest with the Managing Committee of the Society. 
+                If need be, the Society may allow any person or institution to become a member for name sake only. 
+                The rights of such members shall be as envisaged in the Act.</li>
+            <li>
+                The discretion and power to grant membership shall vest with the Managing Committee.
+            </li>
+            <li>
+                Persons seeking membership shall apply on the prescribed application form, deposit share capital as per bye-law No.14 and also submit a letter of authority as per bye-law No.8 (a). 
+                Along with the application, a sum of Rs.5/- as Entrance Fee and value of at least one share of the Society as defined in bye-law No.13 should be deposited. 
+                In case the application is rejected, Entrance Fee and Share Money will be returned to the applicant, but cost of application is not refundable. 
+                Applicants, who are eligible for membership as per these bye-laws shall be treated as members from the date of their admission
+            </li>
+            <li>
+                Every member shall nominate his successor so that in the event of his death amount(s) if any to his credit can be passed on to such nominee. 
+                Such nomination and any subsequent change therein shall be witnessed by two colleagues.
+            </li>
+            <li>
+                <ol style="list-style: lower-alpha;">
+                    <li>Every member shall give an irrevocable letter of authority to his salary disbursing authority, 
+                        authorising him to deduct and remit to the Society every month the amount(s) due to the Society.</li>
+                    <li>Every member shall abide by the Society's bye-laws as amended by its General Body from time to time.</li>
+                </ol>
+            </li>
+            <li>A member can withdraw with due approval of the Managing Committee, his membership by giving three months' notice, 
+                provided he had been a member of the Society for a minimum period of one year and he is not indebted to the Society either as a borrower or as a guarantor.
+            </li>
+            <li>A member may be removed from the membership of the Society by a resolution passed by a majority of not less than two-third of the members 
+                present and voting at the General Body meeting of the Society for any one or more of the reasons stated below :-
+                <ol style="list-style: lower-alpha;">
+                    <li>He is not regular in paying the loan instalments or is habitual to non-fulfilment of his responsibilities towards the Society.</li>
+                    <li>He has cheated the Society by giving false statement(s).</li>
+                    <li>He has become insolvent/moved an application to declare himself insolvent or unfit to execute a contract in the eyes of law</li>
+                    <li>He has been convicted for a criminal offence/an offence involving moral turpitude.</li>
+                    <li>He has deliberately committed acts affecting or likely to affect the image and prestige of the Society.</li>
+                </ol>
+                Provided he has been given a reasonable opportunity of making representation in the matter.
+                <br>A member so removed shall be eligible for readmission only after expiry of a period of one year from the date of removal. 
+                <br>Such readmission shall also be by a resolution passed by a majority of not less than two-third of the members present and voting at the General Body meeting of the Society.
+            </li>
+            <li>Membership shall stand terminated under the following circumstances:
+                <ol style="list-style: lower-alpha;">
+                    <li>Death of a member</li>
+                    <li>Non-holding of minimum one share.</li>
+                    <li>Ineligibility as per bye-law No 4.</li>
+                    <li>Acceptance of resignation under bye-law No.9</li>
+                    <li>Removal in terms of bye-law No.10</li> 
+                </ol>
+            </li>
+            <li>
+                <ol style="list-style: lower-alpha;">
+                    <li>The liability of the members towards the loans or deposits taken by the Society shall be limited to the extent of the paid up value of their share capital.</li>
+                    <li>Even after termination of membership of the Society, the liability of the member towards the liabilities of the Society as on the date of his termination shall continue for 2 years from the date of termination.</li>
+                    <li>Likewise the liability of a deceased member's estate for the liability of the Society as on the date of his death shall continue for 2 years from the date of death.</li>
+                </ol>
+            </li>
+        </ol>
+    </div><br><br>
+    <hr style="display: block; border-width: 0.15vw; border-color:rgb(170, 166, 166);"><br><br>
+    <div class="share" id="share" style="margin-left:30vw;">
+        <h2 style=" font-size:1.6vw;"><b>Share Capital</b></h2><br><br>
+        <ol style="font-size:1.2vw;">
+            <li>The authorised capital of the Society shall be Rs.10,00,00,000/- (Rupees Ten crore only) comprising of 40 lakh shares of Rs.25/- (Rupees Twenty five only) each. 
+                It can be increased or decreased by passing a resolution to that effect at the General Body of the Society and with the approval of the Registrar.</li>
+            <li>Every member shall hold at least one share and no member shall hold shares worth more than 1/5th of the Paid up Capital or Rs.50,000/- (Rupees Fifty thousand only), whichever is less. 
+                By virtue of being the successor of a deceased member or due to any other reason if a member is required to hold shares beyond the prescribed limit, the Society may permit transfer of shares beyond the said limit in such cases. 
+                The power to accept applications for share(s) shall be with the Managing Committee.</li>
+            <li>A certificate will be issued for the share/shares held by a member. 
+                The certificate will bear the common seal of the Society and the signatures of the President and the Chief Executive or Additional Chief Executive . A member shall hold the share(s) with him for at least a year. 
+                The share(s) can be surrendered to the Society or transferred to other members only with the approval of the Society.</li>
+            <li>A member whose membership stands terminated in terms of bye-law No.11 (c) or (d) shall be paid within 6 months of such termination an amount equivalent to the value of his share(s) at that time, which shall be decided as per the Act/Rules by the Managing Committee but not exceeding the amount deposited by him. However, such refunds in any accounting year shall not exceed 1/10th of the Paid up Capital of the Society as at the end of the previous accounting year and the member's liability(ties) to the Society, 
+                if any, shall be deducted there from.</li>
+            <li>On the death of a member the Society shall refund within a year the then value of his share(s), decided as per the Act/Rules by its Managing Committee, which shall not exceed the amount deposited by him after deducting his dues to the Society, to the person nominated as per bye-law No.7 by the deceased member. In case there is no nomination, the amount shall be paid to the person, 
+                who in the opinion of the Managing Committee is the legal heir or eligible to receive the amount by virtue of his legal guardianship, 
+                after obtaining an indemnity bond.</li>
+        </ol>
+    </div><br><br>
+    <hr style="display: block; border-width: 0.15vw; border-color:rgb(170, 166, 166);"><br><br>
+    <div class="loan" id="loan" style="margin-left:30vw;">
+        <h2 style=" font-size:1.6vw;"><b>Loan (Maximum Rs. 5.00 lacs @ 7% p.a.</b></h2><br><br>
+        <ol style="font-size:1.2vw;">
+            <li>The Society shall grant loans to its members in terms of bye-law No.2 (c). 
+                A member desirous of obtaining a loan shall submit an application addressed to the President, in writing, stating the purpose and term of the loan and the guarantee offered. 
+                The Managing Committee shall have the power to sanction or reject the application.
+                <br>A loan shall generally be sanctioned for the following purposes:-
+            <ol style="list-style: lower-roman;">
+                <li>For purchase of household articles, repairs to house, purchase of house / flat or plot of land.</li>
+                <li>For meeting the educational and employment expenses of the children or dependants.</li>
+                <li>For treatment of disease(s).</li>
+                <li>Marriage, thread and other essential rituals, ceremonies etc.</li>
+                <li>For paying insurance premium or other liability.</li>
+                <li>To overcome unexpected calamities (e.g. natural calamities).</li>
+                <li>To buy shares in another co-operative society which is not a competitor.</li>
+                <li>Any other purpose which the Managing Committee may deem fit.</li>
+            </ol><b>No loan shall be granted for money lending.</b></li>
+            <li>Ordinarily, loan applications will be scrutinised by the Managing Committee and the loans sanctioned by the Committee. In emergent circumstances, loans may be sanctioned by the President . 
+                It will be the responsibility of the Managing Committee not to sanction bad / doubtful loans.</li>
+            <li>A member shall be granted loan upto 10 times his share capital or 35 times his salary (Basic Pay, Special Pay and Dearness Allowance), 
+                whichever is less, subject to a maximum of Rs.3.00 lacs (Rupees Three lacs only)</li>
+            <li>The monthly instalments of loan shall be decided by the Managing Committee. Such instalments shall, however, not exceed 120. Expenses in connection with remitting loan instalments and dues to the Society shall be borne by the borrower. No loan can be repaid in less than 12 monthly instalments . 
+                However, under extra-ordinary circumstances, repayment may be made / permitted before the said period.</li>
+            <li>Sanction of loans to members shall be on the basis of surety furnished by two other members good for the amount acceptable to the Society subject to the member complying with the terms and conditions laid down by the Bank vis-a-vis deductions from salary, etc.The quantum ceiling for such surety by any member shall be fixed by the Managing Committee. 
+                If the loanee fails to repay the principal, pay interest at the determined rate or other dues to the Society, such dues shall be recovered from the surety(ies) jointly or severally.</li>
+            <li>The Managing Committee shall have powers to sanction the loan applied for or reduce the amount applied for/sanctioned amount or reject the application outright. 
+                It will not be necessary to assign the reasons for reducing the loan amount or rejecting the application.</li>
+            <li>Interest on loan shall be fixed by the Managing Committee and General Body from time to time.The loan should be utilised for the purpose for which it was obtained. If it is used for any other purpose, 
+                the Managing Committee may recover the entire loan together with interest at once and also recover a penal interest at the rate decided by the Managing Committee.</li>
+            <li>A member availing loan or furnishing guarantee under bye-law No.41 shall undertake to discharge his liability to the Society in full before quitting his job. 
+                A guarantor member may arrange for an alternate guarantor(s) and thereby get himself discharged of the responsibility.</li>
+            <li>In the event of death of a guarantor or if in the opinion of the Managing Committee a guarantor is unfit to continue as such or the property offered as security is insufficient, the member shall be advised to furnish another guarantor or increase the security. 
+                If another guarantor or security does not forthcome within the time stipulated in the notice, then the loan granted on the guarantee/security should be returned in full with interest.</li>
+            <li>It will be the responsibility of the Managing Committee to recover the loans in time. 
+                It will also be the duty of the Managing Committee to initiate legal proceedings to recover the balance amounts within 6 months from the date of occurrence of irregularity.</li>
+        </ol>
+    </div><br><br>
+    <hr style="display: block; border-width: 0.15vw; border-color:rgb(170, 166, 166);"><br><br>
+    <div class="dep" id="dep" style="margin-left:30vw;">
+        <h2 style=" font-size:1.6vw;"><b>Compulsory Deposit</b></h2><br><br>
+        <ol style="font-size:1.2vw;">
+            <li>Every member shall deposit every month a sum as decided from time to time by the General Body from the date of becoming a member or from the date decided by the General Body:
+                <ol style="list-style: lower-alpha;">
+                    <li>Clerks / Subordinate Staff /Subordinate Staff - Rs.400/- per month</li>
+                </ol>
+                The said compulsory deposit shall be known as Monthly Compulsory Cumulative Deposit Fund (MCCDF).</li>
+            <li><ol style="list-style: lower-alpha;">
+            <li>The amount recovered in terms of bye-law No.48 is returnable with interest to the members when they quit or are removed from the Society. 
+                However in order to extend financial security /assistance to the members and their families as provided for in bye-law No.2 (e) and 31 (r) recovery can be made from the investments or deposits with the Society</li>
+             <li>The amount referred to in (a) above may be reinvested for a specific period at the specified rate of interest at the written request of the member or his successor.</li></ol>
+            </li>
+        </ol>
+    </div><br><br>
+    <hr style="display: block; border-width: 0.15vw; border-color:rgb(170, 166, 166);"><br><br>
+    <div class="fund" id="fund" style="margin-left:30vw;">
+        <h2 style=" font-size:1.6vw;"><b>Security & Aid Fund</b></h2><br><br>
+        <p style="font-size:1.2vw;">Every member shall contribute Rs.100/- (Rupees Hundred only) per month to the Security & Aid Fund (SAF) constituted by the Society in order to provide financial assistance and security to its members . In the event of death of a member, his nominee shall be paid a sum equivalent to Rs.1,00,000/- (Rupees One lac only) excluding value of shares and accruals in MCCDF plus interest thereon OR where the deceased had availed himself of a loan from the Society a moratorium on such loan up to Rs. 5,00,000/- (Rupees Four lacs only) shall be granted after appropriating the value of share(s), accruals in MCCDF, etc. The terms and conditions/rules and regulations governing SAF shall be approved from time to time by the General Body. A member or the nominee of a member aggrieved over the award of compensation/assistance under SAF shall have the right to appeal to the General Body of the Society.</p>
+    </div><br><br>
+    <hr style="display: block; border-width: 0.15vw; border-color:rgb(170, 166, 166);"><br><br>
+</div>  
+</body>
+</html>

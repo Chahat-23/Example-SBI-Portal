@@ -1,0 +1,183 @@
+<!DOCtype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body><nav>
+<div class="topnav" id="myTopnav">
+    <a href="#home" style="float:left;">HOME PAGE</a>
+    <a href="board.html" style="float:left;">BOARD OF DIRECTORS</a>
+    <a href="society.html" style="float:left;">SOCIETY STAFF</a>
+    <a href="about.html" style="float:left;">ABOUT US</a>
+    <a href="scheme.html" style="float:left;">SOCIETY SCHEMES</a>
+    <a href="forms.html" style="float:left;">FORMS DOWNLOAD</a>
+    <a href="gallery.html" style="float:left;">PHOTO GALLERY</a>
+    <a href="faq.html" style="float:left;">FAQs</a>
+    <a href="contact.html" style="float:left;">CONTACT US</a>
+    <a href="#" style="float:right;">LOGIN</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+    </a>
+</div></nav>
+<script>
+        $(document).ready(function () {
+            $(document).on("scroll", onScroll);
+     
+            $('a[href^="#"]').on('click', function (e) {
+                e.preventDefault();
+                $(document).off("scroll");
+     
+                $('a').each(function () {
+                    $(this).removeClass('active');
+                })
+                $(this).addClass('active');
+     
+                var target = this.hash;
+                $target = $(target);
+                $('html, body').stop().animate({
+                    'scrollTop': $target.offset().top+2
+                }, 500, 'swing', function () {
+                    window.location.hash = target;
+                    $(document).on("scroll", onScroll);
+                });
+            });
+        });
+     
+        function onScroll(event){
+            var scrollPosition = $(document).scrollTop();
+            $('nav a').each(function () {
+                var currentLink = $(this);
+                var refElement = $(currentLink.attr("href"));
+                if (refElement.position().top <= scrollPosition && refElement.position().top + refElement.height() > scrollPosition) {
+                    $('nav ul li a').removeClass("active");
+                    currentLink.addClass("active");
+                }
+                else{
+                    currentLink.removeClass("active");
+                }
+            });
+        }
+    </script>
+<script>
+    function myFunction() 
+    {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav")
+    { x.className += " responsive"; } 
+    else 
+    { x.className = "topnav"; }
+    }
+</script><BR><BR>
+<div class="slideshow-container">
+        <div class="mySlides fade">
+             <div class="numbertext">1 / 3</div>
+             <img src="s1.jpg" style="width:100%; height:40vw; vertical-align: middle;">
+         </div>   
+         <div class="mySlides fade">
+             <div class="numbertext">2 / 3</div>
+             <img src="s2.jpg" style="width:100%; height:40vw; vertical-align: middle;">
+         </div>
+         <div class="mySlides fade">
+             <div class="numbertext">3 / 3</div>
+             <img src="s3.jpg" style="width:100%; height:40vw; vertical-align: middle;">
+         </div></div>
+
+     <br>
+     <div style="text-align:center">
+         <span class="dot"></span> 
+         <span class="dot"></span> 
+         <span class="dot"></span> 
+     </div>     
+     <script>
+         var slideIndex = 0;
+         showSlides();
+         function showSlides() 
+         {
+             var i;
+             var slides = document.getElementsByClassName("mySlides");
+             var dots = document.getElementsByClassName("dot");
+             for (i = 0; i < slides.length; i++)
+             {
+               slides[i].style.display = "none";  
+             }
+             slideIndex++;
+             if (slideIndex > slides.length) {slideIndex = 1}    
+             for (i = 0; i < dots.length; i++)
+             {
+               dots[i].className = dots[i].className.replace(" active", "");
+             }
+             slides[slideIndex-1].style.display = "block";  
+             dots[slideIndex-1].className += " active";
+             setTimeout(showSlides, 2000); // Change image every 2 seconds
+         }
+    </script>  
+    <div id="home"> 
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-9">
+                    <h1 style="color:#448AFF; font-size:2vw;"><b>INTRODUCTION</b></h1><br><br><b>
+                    <p style="font-size:1vw;">S. B. I. Karmchari Sahkari Sakh Samiti Maryadit, Bhopal was registered in 1976 under M.P.Co-operative Society act 1960, 
+                        thereafter with the formation of Chattisgarh State it attained the status of Multi-State Cooperative Society in 2001. 
+                        The membership of Society consisting of serving employees of State Bank of India rose 
+                        from a mearge 18 members on inception to 9125 members in the year 2015 and has the authorized share capital of Rs.
+                        15 crore comprising of 60 lakh share of Rs.25/- each.
+                        <br><br>The basic object of the Society was to promote self reliance and cooperation amongst its members and to ensure 
+                        them economic and social uplift with the intention of promoting habit of saving. 
+                        It is a non-profit making organization and the activities are realized through the personal efforts and dedication 
+                        of its members, thus making it an organization completely working towards the social cause. 
+                        The society has successfully arranged loan at suitable rate of interest according to the need of its members . 
+                        In addition, it is providing retirement benefit to its members along with scholarship to their wards to encourage them 
+                        in their education. 
+                        The Society has got its own Guest House at a very prime location in Bhopal which is provided to its members 
+                        at nominal charges.
+                        <br><br>The Society is functioning with the motto of trust, awareness and progress. 
+                        It is managed by a strong and trustworthy 20 Board of Directors and staff of nearly 20 members. 
+                        The society is marching smoothly towards its aim with disbursing dividend every year and providing efficient and timely service 
+                        to all its members.
+                    </p></b>
+                    <h2 style="font-size:1.5vw;">
+                        <b>RECENTLY  On 11th APRIL’2016  KARMCHARI SAHKARI SAKH SAMITI MARYADIT  IS  AWARDED  ISO  9001-2008  
+                        CERTIFICATE  FOR  ‘PROVIDING  ASSOCIATION  OF  MEMBERSHIP  SERVICES SUCH AS DISTRIBUTION OF LOANS’.</b>
+                    </h2>
+                    <br><br>
+                    <hr style="display: block; border-width: 0.15vw; border-color:rgb(170, 166, 166);">
+                    <br><br>
+                    <h1 style="color:#448AFF; font-size:2vw;"><b>HIGHLIGHTS</b></h1><br><br><b>
+                        <p style="font-size:1vw;">
+                        <ul>
+                            <li>LOAN UPTO RS 5LAKHS @ 7%.</li>
+                            <li>SCHOLARSHIP FOR SCHOLAR STUDENTS.</li>
+                            <li>LOAN WAIVER OF DECEASED MEMBER.</li>
+                            <li>some highlight....</li>
+                            <li>some highlight....</li>
+                            <li>some highlight....</li>
+                        </ul>
+                        </p>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="cont">
+                        <h1 class="hcont" style="color:white;">HIGHLIGHTS</h1>
+                        <marquee behavior="scroll" direction="up"  scrolldelay="200" style="color:white;">
+                            <p>LOAN UPTO RS 5LAKHS @ 7%.</p>
+                            <p>SCHOLARSHIP FOR SCHOLAR STUDENTS.</p>
+                            <p>LOAN WAIVER OF DECEASED MEMBER.</p>
+                            <p>some highlight....</p>
+                            <p>some highlight....</p>
+                            <p>some highlight....</p>
+                        </marquee>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

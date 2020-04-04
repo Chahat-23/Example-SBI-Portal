@@ -1,0 +1,107 @@
+.topnav {
+    position:fixed;
+    background-color:#448AFF;
+    top:0;
+    width:100%;
+    z-index: 1000;
+  }
+  
+  .topnav a {
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1vw;
+  }
+  
+  .topnav a:hover {
+    background-color: white;
+    color: black;
+  }
+  .topnav a.active {
+      background-color: black;
+  }
+  .topnav .icon {
+    display: none;
+  }
+  @media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+        background-color: #448AFF;
+        display: block;
+      font-size:1.5vw;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .topnav a:first-child {font-size: 1.5vw;}
+  }
+  
+  @media screen and (max-width: 600px) {
+    background-color: #448AFF;
+
+    .topnav.responsive {position: relative;
+        font-size:1.5vw;}
+    .topnav.responsive .icon {
+        background-color: #448AFF;
+        position: absolute;
+      right: 0;
+      top: 0;
+      font-size:1.5vw;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+      font-size:2vw;
+    }
+  }.container
+{
+    width:100%;
+    background-color: rgb(8, 61, 153);
+    color:white;
+    font-size:2vw;
+    position:fixed;
+    z-index:1000;
+}
+.sidenav
+{
+  height: 100%; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1000;
+  left:0;
+  top:11.5vw;
+  background-color: rgb(8, 61, 153);
+  padding-top: 20px;
+}
+@media screen and (max-width: 600px) {
+    .sidenav {
+        top:32.5vw;
+    }
+  }
+.sidenav a {
+    padding: 1vw 1.5vw 1vw 1.5vw;
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+.sidenav a:hover {
+    color: black;
+    background-color: white;
+  }
+.active
+{
+    color:white;
+    background-color: black;
+}
+.main
+{
+    top:8.5vw; 
+    
+}
+@media screen and (max-width: 600px) {
+    .main {
+        top:25vw;
+    }
+  }

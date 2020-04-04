@@ -1,0 +1,131 @@
+<!DOCtype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="board.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+        
+                <div class="topnav" id="myTopnav">
+                    <a href="home.html" style="float:left;">HOME PAGE</a>
+                    <a href="board.html" style="float:left;">BOARD OF DIRECTORS</a>
+                    <a href="#scheme" style="float:left;">SOCIETY SCHEMES</a>
+                    <a href="forms.html" style="float:left;">FORMS DOWNLOAD</a>
+                    <a href="society.html" style="float:left;">SOCIETY STAFF</a>
+                    <a href="about.html" style="float:left;">ABOUT US</a>
+                    <a href="gallery.html" style="float:left;">PHOTO GALLERY</a>
+                    <a href="faq.html" style="float:left;">FAQs</a>
+                    <a href="contact.html" style="float:left;">CONTACT US</a>
+                    <a href="#" style="float:right;">LOGIN</a>
+                    </a>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                            <i class="fa fa-bars"></i>
+                          </a>
+                </div>
+                <script>
+                    function myFunction() 
+                    {
+                    var x = document.getElementById("myTopnav");
+                    if (x.className === "topnav")
+                    { x.className += " responsive"; } 
+                    else 
+                    { x.className = "topnav"; }
+                    }
+                </script><br><br>
+    <div class="container">
+        <table width=100%;>
+        <tr>
+            <td>
+                <img src="logo.png" alt="LOGO" width="120px" height="120px">
+            </td>
+            <td><CENTER><h1 id="h1" style=" color:rgb(243, 234, 196);">WELCOME TO SBI SOCIETY WEBSITE</h1></CENTER>
+                <marquee>State Bank of India(Bhopal circle), Karmchari Sahakari Sakh Samiti Maryadit(Madhya Pradesh and Chhattisgarh), A Multi-State
+                    Cooperative Society,(Regd.No. MSCS /CR /133/ 2001) C/o: State Bank of India, Local Head Office, Hoshangabad Road, Bhopal-462011.
+                </marquee></td>
+        </tr>
+        </table>
+    </div>
+        <nav>
+            <div class="sidenav" style="font-size: 1vw;">
+                <a href="#mem"><b>Society Scheme for Members</b></a>
+                <a href="#guest"> <b>Guest House</b> </a>
+                <a href="#sch"> <b>Scholarship</b> </a>
+            </div>
+        </nav>
+        <script>
+        $(document).ready(function () {
+            $(document).on("scroll", onScroll);
+     
+            $('a[href^="#"]').on('click', function (e) {
+                e.preventDefault();
+                $(document).off("scroll");
+     
+                $('a').each(function () {
+                    $(this).removeClass('active');
+                })
+                $(this).addClass('active');
+     
+                var target = this.hash;
+                $target = $(target);
+                $('html, body').stop().animate({
+                    'scrollTop': $target.offset().top+2
+                }, 500, 'swing', function () {
+                    window.location.hash = target;
+                    $(document).on("scroll", onScroll);
+                });
+            });
+        });
+     
+        function onScroll(event){
+            var scrollPosition = $(document).scrollTop();
+            $('nav a').each(function () {
+                var currentLink = $(this);
+                var refElement = $(currentLink.attr("href"));
+                if (refElement.position().top <= scrollPosition && refElement.position().top + refElement.height() > scrollPosition) {
+                    $('nav ul li a').removeClass("active");
+                    currentLink.addClass("active");
+                }
+                else{
+                    currentLink.removeClass("active");
+                }
+            });
+        }
+    </script><br><br><br><br><br><br>
+<div class="main " id="scheme">
+    <div class="mem" id="mem" style="margin-left:30vw;">
+        <center><img src="sbi.jpg" alt="SBI" width="300vw" height="250vw"></center>
+        <h2 style="color:#448AFF; font-size:2vw;"><b>SOCIETY SCHEMES</b></h2><br><br>
+        <hr style="display: block; border-width: 0.15vw; border-color:rgb(170, 166, 166);"><br><br>
+        <h2 style=" font-size:1.6vw; background-color:#448AFF; color:white;"><b>Society Scheme for Members</b></h2><br><br>
+        <p style="font-size:1.2vw;">At the time of retirement of the members who have completed minimum ten years of membership 
+            are entitled to get an honorarium of Rs.10,000/- under Retirement Benefit Scheme of the society.</p>
+    </div><br><br></div>
+    <div class="guest" id="guest" style="margin-left:30vw;">
+    <h2 style=" font-size:1.6vw; background-color:#448AFF; color:white;"><b>Guest House</b></h2><br><br>
+    <p style="font-size:1.2vw;">The Society has its own guest house which is provided to its members at nominal charges. 
+        It is situated at a very prime location of Bhopal at E-5/13 A, Arera Colony.( Phone No 0755-2553972).
+        <br>The charges are as under:
+        <ol style="font-size:1.2vw;">
+        <li>One Bed Rs.100/- per day </li><br>
+        <li>One Room Rs.300/- per day</li><br>
+        <li>Complete Guest House Rs.3000/- perday for Member and Rs5000/- for others</li><br></ol>
+        (One Hall,Kitchen,Dining room, 2 Bed room)
+        <b>Note</b> : Rs.2000/- will be deposited as security with the society at the time of guest house booking and 
+        other charges like water,electricity,sweeper etc. will be adjusted in this amount.
+    </p>
+</div><br><br>
+<div class="sch" id="sch" style="margin-left:30vw;">
+<h2 style=" font-size:1.6vw; background-color:#448AFF; color:white;"><b>Scholarship</b></h2><br><br>
+<p style="font-size:1.2vw;">Society provides as under, scholarship to the wards of its members to encourage in their studies :- Students who pass 8th standard exam with 80% and above marks are entitled to get Rs.1500/- (one time)
+    Students who pass 10th standard exam with 80% and above marks are entitled to get Rs.2000/- (one time 
+    Students who pass 12th standard exam with 80% and above marks are entitled to get Rs.2500/- ( one time ) W.E.F academic year 2009-10.
+    <b>Students who pass higher exam (graduation/post graduation) with 70% and above marks are entitled to get Rs.2500/- ( one time ) W.E.F academic year 2009-10</b></p>
+</div><br><br>
+    </div>  
+</body>
+</html>

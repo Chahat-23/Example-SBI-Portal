@@ -1,0 +1,260 @@
+<!DOCtype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="board.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+        
+                <div class="topnav" id="myTopnav">
+                    <a href="home.html" style="float:left;">HOME PAGE</a>
+                    <a href="#board" style="float:left;">BOARD OF DIRECTORS</a>
+                    <a href="society.html" style="float:left;">SOCIETY STAFF</a>
+                    <a href="about.html" style="float:left;">ABOUT US</a>
+                    <a href="scheme.html" style="float:left;">SOCIETY SCHEMES</a>
+                    <a href="forms.html" style="float:left;">FORMS DOWNLOAD</a>
+                    <a href="gallery.html" style="float:left;">PHOTO GALLERY</a>
+                    <a href="faq.html" style="float:left;">FAQs</a>
+                    <a href="contact.html" style="float:left;">CONTACT US</a>
+                    <a href="#" style="float:right;">LOGIN</a>
+                    </a>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                            <i class="fa fa-bars"></i>
+                          </a>
+                </div>
+                <script>
+                    function myFunction() 
+                    {
+                    var x = document.getElementById("myTopnav");
+                    if (x.className === "topnav")
+                    { x.className += " responsive"; } 
+                    else 
+                    { x.className = "topnav"; }
+                    }
+                </script><br><br>
+    <div class="container">
+        <table width=100%;>
+        <tr>
+            <td>
+                <img src="logo.png" alt="LOGO" width="120px" height="120px">
+            </td>
+            <td><CENTER><h1 id="h1" style=" color:rgb(243, 234, 196);">WELCOME TO SBI SOCIETY WEBSITE</h1></CENTER>
+                <marquee>State Bank of India(Bhopal circle), Karmchari Sahakari Sakh Samiti Maryadit(Madhya Pradesh and Chhattisgarh), A Multi-State
+                    Cooperative Society,(Regd.No. MSCS /CR /133/ 2001) C/o: State Bank of India, Local Head Office, Hoshangabad Road, Bhopal-462011.
+                </marquee></td>
+        </tr>
+        </table>
+    </div>
+        <nav>
+            <div class="sidenav" style="font-size: 1.5vw;">
+                <a href="#10-15">10-08-2015 <b>ONWARDS</b></a>
+                <a href="#10-04">10-10-2004 <b>TO</b> 08-08-2010</a>
+                <a href="#18-98">18-11-1998 <b>TO</b> 09-10-2004</a>
+                <a href="#06-92">06-12-1992 <b>TO</b> 17-11-1998</a>
+                <a href="#29-86">29-06-1986 <b>TO</b> 05-12-1992</a>
+                <a href="#22-83">22-01-1983 <b>TO</b> 28-06-1986</a>
+                <a href="#30-76">30-12-1976 <b>TO</b> 21-01-1983</a>
+            </div>
+        </nav>
+        <script>
+        $(document).ready(function () {
+            $(document).on("scroll", onScroll);
+     
+            $('a[href^="#"]').on('click', function (e) {
+                e.preventDefault();
+                $(document).off("scroll");
+     
+                $('a').each(function () {
+                    $(this).removeClass('active');
+                })
+                $(this).addClass('active');
+     
+                var target = this.hash;
+                $target = $(target);
+                $('html, body').stop().animate({
+                    'scrollTop': $target.offset().top+2
+                }, 500, 'swing', function () {
+                    window.location.hash = target;
+                    $(document).on("scroll", onScroll);
+                });
+            });
+        });
+     
+        function onScroll(event){
+            var scrollPosition = $(document).scrollTop();
+            $('nav a').each(function () {
+                var currentLink = $(this);
+                var refElement = $(currentLink.attr("href"));
+                if (refElement.position().top <= scrollPosition && refElement.position().top + refElement.height() > scrollPosition) {
+                    $('nav ul li a').removeClass("active");
+                    currentLink.addClass("active");
+                }
+                else{
+                    currentLink.removeClass("active");
+                }
+            });
+        }
+    </script><br><br><br><br><br><br>
+<div class="main " id="board">
+    <div class="10-15" id="10-15" style="margin-left:30vw;">
+        <center><img src="sbi.jpg" alt="SBI" width="300vw" height="250vw"></center>
+        <h2 style="color:#448AFF; font-size:2vw;"><b>BOARD OF DIRECTORS (from 10-08-15)</b></h2><br><br>
+        <ol style="font-size:1.2vw;">
+            <li>SHIBABRATA BARDHAN <b>President</b></li>
+            <li>SHUBH PRABHA GUPTA <b>Vice President</b></li>
+            <li>ARUN BHAGOLIWAL <b>Secretary</b> </li>
+            <li>RAJENDRA SINGH RANA <b>Vice President </b> (up to 28/02/2017)  RETD.(28/02/2017)</li>  
+            <li>RAJESH KUMAR KATHAL <b>Director</b></li> 
+            <li>RAJAT MOHAN VERMA <b>Director  & Representative of MPRS Bank</b>(from 25/03/2017)</li>
+            <li>PANKAJ SAXENA <b>Director & Representative of MPRS Bank</b>( 09/06/2012 to 25/03/2017</li>
+        </ol>
+        <h2 style="font-size:1.5vw;"><b>(vice  president from  25/03/2017)</b></h2>
+        <ol start="8" style="font-size:1.2vw;">
+            <li>PRAKASH CHAND RAI , <b>Director </b>,  Retd. 30/06/2016</li>
+            <li>SHARAD KUMAR RATHORE , <b>Director </b>,  Retd. 30/06/2018</li>
+            <li>A.L.MADHURAJ , <b>Director </b>,  Retd. 31/03/2017</li>
+        </ol>
+        <h2 style="font-size:1.5vw;"><b>(From 10/08/2015 Director)</b></h2>
+        <ol start="11" style="font-size:1.2vw;">
+            <li>DILIP KUMAR CHAWLA, <b>Director</b> Retd. On 31/01/2016</li>
+            <li>RAJENDRA KUMAR RAWAT, <b>Director</b></li>
+            <li>DEEPAK KUMAR SHAKARGAYE Retd. On 31/01/2017</li>
+            <li>ASHOK KUMAR KHAJANCHI  Retd. On 31/07/2018</li>
+            <li>BHUPENDRA NADEM, <b>Director</b> Retd on 31/07/2018</li>
+            <li>V.V.N RAO, <b>Director</b> from 12/03/2016,Retd. On 31/03/2018</li>
+            <li>HEMANT GOSWAMI, <b>Director</b> from12/03/2016</li>
+            <li>RAHIM KHAN, <b>Director</b> from12/03/2016</li>
+            <li>NALIN SHARMA, <b>Director</b> from 01/04/2017</li>
+            <li>DHARMENDRA SHRIVASTAVA, <b>Director</b> from  01/04/2017</li>
+            <li>JAYANT KUMAR PACHORI, <b>Director</b> from  01/04/2017</li>
+            <li>SATISH GUPTA, <b>Director</b> from  01/04/2017</li>
+            <li>SWAPAN KUMAR CHAKRAWARTY, <b>Director</b> from  25/03/2017, Retd 31/08/2017</li>
+            <li>VIJAY BAKSHI, <b>Director</b> from  24/08/2018</li>
+        </ol>
+    </div><br><br>
+    <hr style="display: block; border-width: 0.15vw; border-color:rgb(170, 166, 166);"><br>
+    <div class="10-04" id="10-04" style="margin-left:30vw;">
+        <h2 style="color:#448AFF; font-size:2vw;"><b>Board of Directors (10/10/2004 to 08/08/2010)</b></h2><br><br>
+        <ol style="font-size:1.2vw;">
+            <li>RAMENDRA NATH HORE <b>President</b> (up to 31/07/2010)</li>
+            <li>SURENDRA PRAKASH JASORIA <b>Vice president</b></li>
+            <li>TARIQ RAFIQ ANSARI <b>Vice president </b></li>
+            <li>ARUN BHAGOLIWAL <b>Director & Representative of MPRS Bank</b></li>
+            <li>RAJESH KUMAR KATHAL <b>Director</b></li>
+            <li>DHARMENDRA KUMAR MITTAL <b>Director</b></li>
+            <li>PRAMOD KUMAR NARAMDEV <b>Director(up to 28/02/2009)</b></li>
+            <li>SHIBABRATA BARDHAN <b>Director</b></li>
+            <li>SANTOSH KUMAR TIWARI <b>Director</b> </li>
+            <li>VINAYAK PRASAD AGRAWAL <b>Director</b></li>
+            <li>SHUBH PRABHA GUPTA <b>Director</b></li>
+            <li>SADHNA SHARMA <b>Director</b> (from 11/09/2005)</li>
+            <li>SHARAD KUMAR RATHORE <b>Director</b> </li>
+            <li>HAZARI LAL MALVIYA <b>Director</b></li>
+            <li>NIRMAL KUMAR DUBEY <b>Director</b></li>
+            <li>MAHESH KUMAR MASRAM <b>Director</b></li>
+        </ol></div><br><br>
+        <hr style="display: block; border-width: 0.15vw; border-color:rgb(170, 166, 166);"><br>
+        <div class="18-98" id="18-98" style="margin-left:30vw;">
+            <h2 style="color:#448AFF; font-size:2vw;"><b>Board of Directors (18/11/1998 to 09/10/2004)</b></h2><br><br>
+            <ol style="font-size:1.2vw;">
+                <li>Vinod Pathak <b>President</b> (upto 30/06/2003)</li>
+                <li>Smt.Subhprabha Gupta <b>Vice President</b></li>
+                <li>Hazari Lal Malviya <b>Vice President</b> </li>
+                <li>Prakash Rai <b>Secretary</b></li>
+                <li>Prahlad Rai Agrawal <b>Jt.Secretary</b> (Upto 31/03/2001)</li>
+                <li>R.S.Tripathi <b>Treasurer</b> </li>
+                <li>Dharmendra Mittal <b>Astt. Treasurer</b></li>
+                <li>R.N.Hore <b>Director</b></li>
+                <li>S.P.Jasoria Director <b>President</b> (from 06/12/2003) </li>
+                <li>T.R.Ansari <b>Director Jt.Secretary</b> (from 22/04/2001)</li>
+                <li>P.D.Gupta<b> Director</b> (upto 08/08/2003)</li>
+                <li>Pandurang Yadav <b>Director</b> (upto 31/01/2001)</li>
+                <li>Mahesh Kumar Masram <b>Director</b></li>
+                <li>Rajaram Mali <b>Director</b></li>
+                <li>Shobha Tiwari <b>Director</b></li>
+                <li>Arun Bhagoliwal <b>Spl. Invitee</b> (From 18/01/03) & <b>Director</b> (from 30/06/03 </li>
+                <li>Rajesh Kathal <b>Spl. Invitee</b> (From 29/12/02) & <b>Director</b> (from 09/08/03)</li>
+                <li>P.K.Naramdeo <b>Director</b> (From 22/04/2001) </li>
+                <li>Shibbrat Bardhan <b>Spl. Invitee</b> (From 06/04/2003)</li>
+            </ol></div><br><br>
+            <hr style="display: block; border-width: 0.15vw; border-color:rgb(170, 166, 166);"><br>
+            <div class="06-92" id="06-92" style="margin-left:30vw;">
+                <h2 style="color:#448AFF; font-size:2vw;"><b>Board of Directors (06/12/1992 to 17/11/1998)</b></h2><br><br>
+                <ol style="font-size:1.2vw;">
+                    <li>Shankar Lal Rai <b>President</b> </li>
+                    <li>Smt.Sushila Dubey Prasad <b>Vice President</b></li>
+                    <li>S.K.Chawaria <b>Vice President</b></li>
+                    <li>N.Prasad <b>Secretary</b></li>
+                    <li>C.P.Hunka <b>Jt.Secretary</b></li>
+                    <li>S.K. Kelva <b>Treasurer</b></li>
+                    <li>Ashok Parteki <b>Astt. Treasurer</b></li>
+                    <li>V.B.Karia <b>Director</b></li>
+                    <li>Vinod Pathak <b>Director</b></li>
+                    <li>P.K.Naramdeo <b>Director</b></li>
+                    <li>G.K.Shrivastava <b>Director</b></li>
+                    <li>Prakash Rai <b>Director & Representative of MPRS Bank</b></li>
+                    <li>Rajshekhar Tripathi <b>Director & Representative of MPRS Bank</b></li>
+                    <li>R.N.Hore <b>Director & Representative of Co. Union</b></li>
+                    <li>S.P.Jasoria <b>Spl. Invitee</b></li>
+                    <li>V.B.Shukla <b>Spl. Invitee</b></li>
+                </ol></div><br><br>
+            <hr style="display: block; border-width: 0.15vw; border-color:rgb(170, 166, 166);"><br>
+            <div class="29-86" id="29-86" style="margin-left:30vw;">
+                <h2 style="color:#448AFF; font-size:2vw;"><b>Board of Directors (29/06/1986 to 05/12/1992)</b></h2><br><br>
+                <ol style="font-size:1.2vw;">
+                    <li>N.Prasad <b>President</b></li>
+                    <li>H.P.Tumram <b>Vice President</b></li>
+                    <li>P.K.Naramdeo <b>Secretary</b> (upto 31-08-1989)</li>
+                    <li>S.K.Gupta <b>Treasurer</b></li>
+                    <li>S.K. Tuli <b>Astt. Treasurer</b> (21/05/1988)</li>
+                    <li>S.C.Sengupta <b>Director</b> (07/11/1990) </li>
+                    <li>G.K.Shrivastava <b>Director</b> </li>
+                    <li>C.S.Jaisal <b>Director</b> </li>
+                    <li>Rishi Kumar Dubey <b>Director</b></li>
+                    <li>V.B.Karia <b>Director</b></li>
+                    <li>Smt. Shashi Kiran Chouhan <b>Director</b></li>
+                    <li>C.P.Hunka <b>Spl. Invitee</b></li>
+                    <li>O.P. Shrivastava <b>Spl. Invitee</b></li>
+                    <li>S.K.Kelva <b>Astt.Treasurer</b> (from 22-05-1988)</li>
+                </ol></div><br><br>
+            <hr style="display: block; border-width: 0.15vw; border-color:rgb(170, 166, 166);"><br>
+            <div class="22-83" id="22-83" style="margin-left:30vw;">
+                <h2 style="color:#448AFF; font-size:2vw;"><b>Board of Directors (22/01/1983 to 28/06/1986)</b></h2><br><br>
+                <ol style="font-size:1.2vw;">
+                    <li>Rishi Kumar Dubey <b>President</b></li>
+                    <li>H.P.Tumram <b>Vice President</b></li>
+                    <li>N.Prasad <b>Secretary</b></li>
+                    <li>C.P.Hunka <b>Treasurer</b> (upto 22-06-1983)</li>
+                    <li>S.K.Gupta <b>Treasurer</b> (from 23-06-83)</li>
+                    <li>P.K.Naramdeo <b>Director</b></li>
+                    <li>G.K.Shrivastava <b>Director</b></li>
+                    <li>O.P.Shrivastava<b> Director</b> </li>
+                    <li>J. L.Gupta <b>Director</b></li>
+                    <li>L.C.Jain <b>Director</b> </li>
+                    <li>Ku.Sushila Dubey <b>Director</b> ( <b>Astt. Treasurer</b> from 23-06-83)</li>
+                </ol></div><br><br>
+            <hr style="display: block; border-width: 0.15vw; border-color:rgb(170, 166, 166);"><br>
+            <div class="30-76" id="30-76" style="margin-left:30vw;">
+                <h2 style="color:#448AFF; font-size:2vw;"><b>Board of Directors (30/12/1976 to 21/01/1983 )</b></h2><br><br>
+                <ol style="font-size:1.2vw;">
+                    <li>Rishi Kumar Dubey <b>President</b></li>
+                    <li>H.P.Tumram <b>Vice President</b></li>
+                    <li>N.Prasad <b>Secretary</b></li>
+                    <li>C.P.Hunka <b>Treasurer</b></li>
+                    <li>S.C. Sengupta <b>Director</b></li>
+                    <li>P.K.Naramdeo <b>Director</b></li>
+                    <li>G.K.Shrivastava <b>Director</b></li>
+                    <li>V.K.Pathak <b>Director</b></li>
+                    <li>Smt.Krishna Verma <b>Director</b> </li>
+                    <li>L.C.Jain <b>Director</b> </li>
+                    <li>C.M.Soni <b>Director</b></li>
+                </ol><br><br><br>
+                <hr style="display: block; border-width: 0.15vw; border-color:rgb(170, 166, 166);"><br><br><br>
+</div>
+</body>
+</html>
